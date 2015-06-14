@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Posts</h1>
+
+<% @posts.each do |post| %>
+
+<div class="post-container">
+  <div class="post-title"><%= link_to post.blurb, post %></div>
+  <div class="votes"><%= post.votes %></div>
+  <div class="post-data"><p>Posted by: <%= link_to post.user.username, post.user(:id) %> in <%= post.category %>.</p></div>
+</div>
+<% end %>
+
+

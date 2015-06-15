@@ -9,12 +9,13 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+
 <%= image_tag @user.profile_pic %>
-<h3>Posts by this user</h3>
+
 <ul>
-<% @posts.each do |post| %>
-  <li><%= link_to post.blurb, post %></li>
-<% end %>
+  <% @user.posts.each do |post| %>
+    <li><%= link_to post.blurb, post %></li>
+  <% end %>
 </ul>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

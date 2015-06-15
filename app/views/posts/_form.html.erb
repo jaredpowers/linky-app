@@ -16,20 +16,24 @@
     <%= f.text_field :link %>
   </div>
   <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
     <%= f.label :blurb %><br>
     <%= f.text_field :blurb %>
   </div>
   <div class="field">
-    <%= f.label :votes %><br>
-    <%= f.number_field :votes %>
-  </div>
-  <div class="field">
     <%= f.label :category %><br>
-    <%= f.text_field :category %>
+    <%= f.select(:category) do %>
+      <% [['Cats', 'Cats'], ['Cool', 'Cool'], ['WTF', 'WTF']].each do |c| -%>
+      <%= content_tag(:option, c.first, value: c.last) %>
+    <% end %>
+<% end %>
   </div>
   <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+    <%= f.select :user_id, @all_users %>
   </div>
   <div class="actions">
     <%= f.submit %>

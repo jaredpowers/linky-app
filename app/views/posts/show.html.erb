@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
   <strong>Link:</strong>
   <%= link_to @post.link, @post %>
 </p>
@@ -8,11 +13,6 @@
 <p>
   <strong>Blurb:</strong>
   <%= @post.blurb %>
-</p>
-
-<p>
-  <strong>Votes:</strong>
-  <%= @post.votes %>
 </p>
 
 <p>

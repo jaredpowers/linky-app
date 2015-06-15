@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faker', '~> 1.4.3'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'bcrypt'
+gem 'acts_as_votable'
 
 group :production do
   gem 'pg'

@@ -21,12 +21,14 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    authenticate_user!
     @all_users = User.select_users
   end
 
   # POST /posts
   # POST /posts.json
   def create
+    authenticate_user!
     @post = Post.new(post_params)
 
     respond_to do |format|

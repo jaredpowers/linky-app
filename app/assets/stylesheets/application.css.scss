@@ -96,6 +96,10 @@ nav {
 
 //Posts
 
+.container {
+  margin-top: 3rem;
+}
+
 h2 {
   @include headings;
   color: $highlight;

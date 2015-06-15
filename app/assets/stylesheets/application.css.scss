@@ -17,31 +17,132 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+a, a:hover {
+  text-decoration: none;
+}
+
+//Variables
+$white: #F4FFF9;
+$black: #0A0310;
+$brand-color: #5A3082;
+$highlight: lighten($brand-color, 10%);
+$darken: darken($brand-color, 10%);
+$spacing: 1rem;
+
+@mixin headings {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+@mixin paragraph {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+//Header
+
+header {
+  background: $white;
+  padding: $spacing;
+
+  h1 {
+    @include headings;
+    color: $brand-color;
+    margin-left: 6rem;
+  }
+}
+
+nav {
+  background: $darken;
+
+  ul {
+    list-style-type: none;
+    margin-bottom: 0;
+  }
+
+  ul li {
+    color: white;
+    display: inline-block;
+    margin-left: $spacing;
+    text-transform: uppercase;
+  }
+
+  li a {
+    color: white;
+    display: inline-block;
+    padding: $spacing;
+  }
+
+  li a:hover {
+    background: white;
+    color: $brand-color;
+  }
+}
+
+//Posts
+
+h2 {
+  @include headings;
+  color: $highlight;
+}
+
+h3 {
+  @include headings;
+  color: $darken;
+}
+
+ p {
+  @include paragraph;
+  color: $black;
+ }
+
+.panel-default {
+  padding: $spacing;
+}
+
 .post-container {
-  border: 1px solid red;
-  background: lightgrey;
-  width: 80%;
-  max-width: 700px;
-  margin: 0 auto;
+  margin-top: $spacing;
+
+  p {
+    padding: $spacing;
+  }
 }
 
-.post-title {
-  width: 80%;
-  float: right;
-  color: blue;
-  padding: 1rem;
+//Users
+
+h4 {
+  @include headings;
+  font-size: 2rem;
+  padding: $spacing;
 }
 
-.votes {
+h5 {
+  @include headings;
+}
+
+.profile {
   width: 20%;
   float: left;
-  color: purple;
-  padding: 1rem;
+  margin-top: 4rem;
+
 }
 
-.post-data {
-  color: orange;
-  clear: both;
-  padding: 1rem;
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.user-body {
+  width: 80%;
+  float: right;
+}
+
+.user-posts li {
+  margin-bottom: $spacing;
+}
+
+.more-posts {
+  padding: $spacing;
 }
 

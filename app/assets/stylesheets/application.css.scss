@@ -35,6 +35,8 @@ $highlight: lighten($brand-color, 10%);
 $darken: darken($brand-color, 10%);
 $spacing: 1rem;
 
+//Global
+
 @mixin headings {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -135,6 +137,20 @@ h3 {
   p {
     padding: $spacing;
   }
+}
+
+.down {
+  background: #E02130;
+  border: 1px solid #C90A00;
+}
+
+.down:hover {
+  background: #C90A00;
+  border: 1px solid #C90A00;
+}
+
+.btn-info .badge {
+  color: $black;
 }
 
 //Users

@@ -36,6 +36,6 @@
     <%= f.select :user_id, @all_users %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= button_to("Submit", {action: "create"}, class: "btn btn-primary") %>
   </div>
 <% end %>

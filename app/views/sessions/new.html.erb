@@ -4,6 +4,7 @@
   <%= form_tag create_session_path do %>
     <p>Email: <%= text_field_tag :email %></p>
     <p>Password: <%= password_field_tag :password %></p>
-    <p><%= submit_tag "Submit" %></p>
+    <%= button_to("Login", {action: "create"}, class: "btn btn-primary") %>
+
   <% end %>
 </div>

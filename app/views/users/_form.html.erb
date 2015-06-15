@@ -32,6 +32,6 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= button_to("Save", {action: "create"}, class: "btn btn-primary") %>
   </div>
 <% end %>

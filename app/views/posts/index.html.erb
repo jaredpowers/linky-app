@@ -1,27 +1,30 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
-  <h2>Listing Posts</h2>
-
+  <div class="col-md-8">
+    <p id="notice"><%= notice %></p>
+    <h2>Listing Posts</h2>
+  </div>
   <% @posts.each do |post| %>
 
-    <div class="panel panel-default">
-      <h3><%= link_to post.title, post %></h3>
-      <div class="post-data">
-        <p><%= post.blurb %></p>
-        <p>Posted by: <%= link_to post.user.username, post.user(:id) %> in <%= post.category %>.</p>
-        <%= link_to like_post_path(post), method: :put do %>
-          <button type="button" class="btn btn-info" aria-label="Left Align">
-             <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
-             <span class="badge"><%= post.get_upvotes.size %></span>
-          </button>
-        <% end %>
-     
-        <%= link_to unlike_post_path(post), method: :put do %>
-          <button type="button" class="btn btn-info" aria-label="Left Align">
-           <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
-           <span class="badge"><%= post.get_downvotes.size %></span>
-          </button>
-        <% end %>
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <h3><%= link_to post.title, post %></h3>
+
+          <p><%= post.blurb %></p>
+          <p>Posted by: <%= link_to post.user.username, post.user(:id) %> in <%= post.category %>.</p>
+          <%= link_to like_post_path(post), method: :put do %>
+            <button type="button" class="btn btn-info" aria-label="Left Align">
+               <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
+               <span class="badge"><%= post.get_upvotes.size %></span>
+            </button>
+          <% end %>
+       
+          <%= link_to unlike_post_path(post), method: :put do %>
+            <button type="button" class="btn btn-info down" aria-label="Left Align">
+             <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
+             <span class="badge"><%= post.get_downvotes.size %></span>
+            </button>
+          <% end %>
+
       </div>
     </div>
   <% end %>

@@ -17,10 +17,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-a, a:hover {
-  text-decoration: none;
-}
-
 //Variables
 $white: #F4FFF9;
 $black: #0A0310;
@@ -39,17 +35,36 @@ $spacing: 1rem;
   font-weight: 300;
 }
 
+a, a:hover {
+  text-decoration: none;
+  color: $brand-color;
+}
+
 //Header
 
 header {
   background: $white;
   padding: $spacing;
+  overflow: hidden;
 
   h1 {
     @include headings;
     color: $brand-color;
-    margin-left: 6rem;
+    display: inline;
+    padding-left: 10px;
+    float: left;
   }
+
+  .logo {
+    display: inline;
+    margin-top: 14px;
+    float: left;
+  }
+
+  .logo-img {
+    width: 50px;
+  }
+
 }
 
 nav {

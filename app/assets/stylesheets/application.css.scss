@@ -165,13 +165,24 @@ h5 {
   @include headings;
 }
 
+.user-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 443px;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 17%;
+  float: left;
+}
+
 .profile {
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  float: left;
-  margin-top: 4rem;
   background: linear-gradient(to bottom, red, purple);
+  margin: 0 auto;
 
   img {
   opacity: .5;
@@ -188,8 +199,9 @@ h5 {
 }
 
 .user-body {
-  width: 80%;
+  width: 70%;
   float: right;
+  padding: $spacing;
 }
 
 .user-posts li {

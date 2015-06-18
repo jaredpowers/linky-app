@@ -153,6 +153,10 @@ h3 {
   color: $black;
 }
 
+.highlight {
+  background: #ffdfb2;
+}
+
 //Users
 
 h4 {
@@ -163,18 +167,6 @@ h4 {
 
 h5 {
   @include headings;
-}
-
-.user-container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 443px;
-  overflow: hidden;
-}
-
-.sidebar {
-  width: 17%;
-  float: left;
 }
 
 .profile {
@@ -196,12 +188,6 @@ h5 {
     opacity: 0.8;
   }
 
-}
-
-.user-body {
-  width: 70%;
-  float: right;
-  padding: $spacing;
 }
 
 .user-posts li {
